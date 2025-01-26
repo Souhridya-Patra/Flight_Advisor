@@ -1,9 +1,8 @@
 import OpenAI from "openai";
-import { Models } from "openai/resources";
-import { createChatBotMessage, createClientMessage, createCustomMessage } from "react-chatbot-kit";
+import { createChatBotMessae, createClientMessage, createCustomMessage } from "react-chatbot-kit";
 
 const openai = new OpenAI({
-    apiKey: ef7829a59a7a44899fca7dde0599695f,
+    apiKey: 'ef7829a59a7a44899fca7dde0599695f',
     baseURL: "https://api.aimlapi.com",
     dangerouslyAllowBrowser: true
 })
@@ -32,7 +31,7 @@ class ActionProvider {
             {
             model: 'gpt-3.5-turbo',
             messages:[
-                {role:"system", content: "You are a Flight Ticket Advisor for least price"},
+                {role:"system", content: "You are a Flight Ticket Advisor for lowest price, and you will provide the best possible options with price in INR"},
                 {role: 'user', content: prompt}
             ],
             temperature: 0.5,
@@ -42,7 +41,7 @@ class ActionProvider {
         
     }
     timer = ms => new Promise(res => setTimeout(res, ms));
-    generateResponseMessage = async () => {
+    generateResponseMessage = async (userMessage) => {
         const responseFromGPT = await this.callGenAI(userMessage);
         let message;
         let numberNoLines = responseFromGPT.split('\n').length;
