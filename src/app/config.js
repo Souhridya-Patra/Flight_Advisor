@@ -26,7 +26,7 @@ const config = {
     // Add custom header with airplane icon
     header: () => (
       <div className="chatbot-header">
-        <h3 className="chatbot-title"; style="color:blue">Flight Advisor ✈️</h3>
+        <h3 className="chatbot-title">Flight Advisor ✈️</h3>
       </div>
     ),
   },
