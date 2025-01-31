@@ -7,7 +7,7 @@ import "./Chat.css"; // Include a CSS file for custom styles
 const theme = {
   background: "#f0f8ff", // Light blue sky background
   headerBgColor: "#1e90ff", // Deep sky blue for the header
-  headerFontColor: "#ffffff", // White font for the header
+  headerFontColor: "#000000", // White font for the header
   botBubbleColor: "#1e90ff", // Bot message bubble in blue
   botFontColor: "#fff", // Font color for bot messages
   userBubbleColor: "#f5f5f5", // Light gray for user messages
